@@ -6,7 +6,7 @@ class Solution {
 
         for(int i=1; i<arr.length; i++){
             delete = Math.max(delete + arr[i], keep);
-            keep = Math.max(keep + arr[i], arr[i]);
+            keep = Math.max(arr[i],keep + arr[i]);
             ans = Math.max(ans, Math.max(delete, keep));
         }
         return ans;
