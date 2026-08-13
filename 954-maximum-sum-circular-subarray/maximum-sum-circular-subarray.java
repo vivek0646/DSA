@@ -11,7 +11,7 @@ class Solution {
         for(int i=0; i< nums.length; i++){
             total += nums[i];
             if(i>0){
-            
+           
             maxsum = Math.max(maxsum+ nums[i], nums[i]);
             maxans = Math.max(maxans, maxsum);
 
@@ -20,10 +20,11 @@ class Solution {
 
             }
         }
-        if(maxans < 0){ 
+
+        int circularSum = total - minans;
+        if(circularSum == 0){
             return maxans;
         }
-        int circularSum = total - minans;
 
         return Math.max(maxans, circularSum);
     }
