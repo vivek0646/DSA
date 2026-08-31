@@ -14,12 +14,12 @@ class Solution {
                 end1 = Math.max(end1, end2);
             }
             else{           //no overlap
-                res.add(new int[]{start1, end1});
+                res.add(new int[]{start1, end1}); //add
                 start1 = start2;
                 end1 = end2;
             }
         }
         res.add(new int[]{start1, end1});
-        return res.toArray(new int[res.size()] [] );
+        return res.toArray(new int[res.size()] [] );  //convert List<int[]> → int[][]
     }
 }
