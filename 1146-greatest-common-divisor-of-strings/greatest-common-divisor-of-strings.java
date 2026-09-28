@@ -7,7 +7,7 @@ class Solution {
 
         if((str2 + str1).equals(res)){
 
-          while(b!= 0){
+          while(b!= 0){   //gcd
                 int temp = b;
                 b = a%b;
                 a = temp;
