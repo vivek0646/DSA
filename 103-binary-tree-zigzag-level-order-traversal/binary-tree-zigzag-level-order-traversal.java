@@ -20,9 +20,11 @@ class Solution {
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
         boolean flag = true;
+
         while(!q.isEmpty()){
             int size = q.size();
             List<Integer> lvl = new ArrayList<>();
+            
             for(int i=0; i<size; i++){
                 TreeNode curr = q.poll();
 
